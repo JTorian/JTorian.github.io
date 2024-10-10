@@ -1,5 +1,9 @@
 body{
-    background-color:#2e243f;
+    background-color:var(--bg);
+    color:var(--txt);
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Lexend', sans-serif;
     overflow-x: hidden;
 }
 
@@ -22,7 +26,7 @@ body{
     border-radius: 15px;
 }
 .nav-bar a{
-    color:#f5efeb;
+    color:var(--txt);
     text-decoration: none;
     font-size: 30px;
     font-family: 'Lexend', sans-serif;
@@ -31,7 +35,7 @@ body{
 }
 
 .home-bar {
-    background-color:#2e243f;
+    background-color:var(--bg);
     width: 10px;
     height:5px;
     border-radius: 20px;
@@ -39,7 +43,7 @@ body{
 }
 
 .projects-bar {
-    background-color:#2e243f;
+    background-color:var(--bg);
     width: 5px;
     height:5px;
     padding-left: 5px;
@@ -48,7 +52,7 @@ body{
 }
 
 .contacts-bar {
-    background-color:#2e243f;
+    background-color:var(--bg);
     width: 10px;
     height:5px;
     border-radius: 20px;
@@ -56,7 +60,7 @@ body{
 }
 
 .home-link:hover .home-bar{
-    background-color: #d3473d;
+    background-color: var(--hl);
     animation: home-bar-stretch;
     animation-duration: .25s;
     animation-fill-mode: forwards;
@@ -74,7 +78,7 @@ body{
 
 
 .projects-link:hover .projects-bar{
-    background-color: #d3473d;
+    background-color: var(--hl);
     animation: projects-bar-stretch;
     animation-duration: .25s;
     animation-fill-mode: forwards;
@@ -91,7 +95,7 @@ body{
 }
 
 .contacts-link:hover .contacts-bar{
-    background-color: #d3473d;
+    background-color: var(--hl);
     animation: contacts-bar-stretch;
     animation-duration: .25s;
     animation-fill-mode: forwards;
@@ -108,17 +112,17 @@ body{
 }
 
 .home-link:is .home-bar{
-    background-color: #d3473d;
+    background-color: var(--hl);
 }
 
 .projects-link:is .projects-bar{
-    background-color: #d3473d;
+    background-color: var(--hl);
     
 }
 
 
 .contacts-link:is .contacts-bar{
-    background-color: #d3473d;
+    background-color: var(--hl);
 }
 
 .socials{
@@ -143,13 +147,13 @@ body{
  
  @keyframes socialsHover{
     100%{
-     background-color: #d3473d;
+     background-color: var(--hl);
     }
   
 }
 
 .introduction .welcome{
-    color:#f5efeb;
+    color:var(--txt);
     font-family: 'Lexend', sans-serif;
     text-shadow: 0px 2px 5px black;
     font-size: 90px;
@@ -161,7 +165,7 @@ body{
 }
 
 .introduction {
-    color:#f5efeb;
+    color:var(--txt);
     font-family: 'Lexend', sans-serif;
     text-shadow: 0px 2px 5px black;
     font-size: 40px;
@@ -178,3 +182,36 @@ body{
     bottom: -319px;
     right: -265px;
 }
+
+
+/* PALETTE DEFINITIONS */
+@property --bg {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #2e243f;
+} 
+@property --txt {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #f5efeb;
+} 
+@property --hl {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #d3473d;
+} 
+@property --hl2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #f6ad0f;
+}
+@property --ll {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #316a96;
+} 
+@property --ll2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #86bcd1;
+} 
